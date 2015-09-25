@@ -1,44 +1,214 @@
-<%= simple_form_for(@vehicle) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :vin %>
-    <%= f.input :mileage %>
-    <%= f.input :year %>
-    <%= f.input :make %>
-    <%= f.input :model %>
-    <%= f.input :transmission %>
-    <%= f.input :cylinders %>
-    <%= f.input :drivetrain %>
-    <%= f.input :body_type %>
-    <%= f.input :fuel_type %>
-    <%= f.input :body_style %>
-    <%= f.input :title_in %>
-    <%= f.input :mileage_is %>
-    <%= f.input :new_used %>
-    <%= f.input :exterior_color %>
-    <%= f.input :interior_color %>
-    <%= f.input :trim %>
-    <%= f.input :doors %>
-    <%= f.input :inventory_source %>
-    <%= f.input :engine %>
-    <%= f.input :highway_mpg %>
-    <%= f.input :wheels %>
-    <%= f.input :condition %>
-    <%= f.input :tag_number %>
-    <%= f.input :photos_taken %>
-    <%= f.input :active %>
-    <%= f.input :options %>
-    <%= f.input :city_mpg %>
-    <%= f.input :nada_wholesale %>
-    <%= f.input :nada_retail %>
-    <%= f.input :sale_status %>
-    <%= f.input :est_recond_cost %>
-    <%= f.input :age %>
-    <%= f.input :comments %>
+<%= form_for @vehicle, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :vin, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :vin, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :mileage, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :mileage, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :year, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :year, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :make, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :make, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :model, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :model, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :transmission, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :transmission, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :cylinders, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :cylinders, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :drivetrain, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :drivetrain, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :body_type, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :body_type, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :fuel_type, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :fuel_type, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :body_style, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :body_style, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :title_in, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :title_in, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :mileage_is, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :mileage_is, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :new_used, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :new_used, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :exterior_color, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :exterior_color, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :interior_color, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :interior_color, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :trim, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :trim, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :doors, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :doors, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :inventory_source, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :inventory_source, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :engine, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :engine, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :highway_mpg, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :highway_mpg, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :wheels, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :wheels, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :condition, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :condition, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :tag_number, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :tag_number, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :photos_taken, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :photos_taken, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :active, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :active, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :options, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :options, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :city_mpg, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :city_mpg, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :nada_wholesale, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :nada_wholesale, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :nada_retail, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :nada_retail, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :sale_status, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :sale_status, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :est_recond_cost, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :est_recond_cost, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :age, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :age, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :comments, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.check_box :comments, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  vehicles_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>
