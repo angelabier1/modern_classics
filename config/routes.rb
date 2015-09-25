@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'guests/index'
+
   resources :vehicles
 
   devise_for :admin_users, ActiveAdmin::Devise.config
