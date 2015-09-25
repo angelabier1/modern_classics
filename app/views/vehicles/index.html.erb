@@ -1,0 +1,91 @@
+<h1>Listing vehicles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Vin</th>
+      <th>Mileage</th>
+      <th>Year</th>
+      <th>Make</th>
+      <th>Model</th>
+      <th>Transmission</th>
+      <th>Cylinders</th>
+      <th>Drivetrain</th>
+      <th>Body type</th>
+      <th>Fuel type</th>
+      <th>Body style</th>
+      <th>Title in</th>
+      <th>Mileage is</th>
+      <th>New used</th>
+      <th>Exterior color</th>
+      <th>Interior color</th>
+      <th>Trim</th>
+      <th>Doors</th>
+      <th>Inventory source</th>
+      <th>Engine</th>
+      <th>Highway mpg</th>
+      <th>Wheels</th>
+      <th>Condition</th>
+      <th>Tag number</th>
+      <th>Photos taken</th>
+      <th>Active</th>
+      <th>Options</th>
+      <th>City mpg</th>
+      <th>Nada wholesale</th>
+      <th>Nada retail</th>
+      <th>Sale status</th>
+      <th>Est recond cost</th>
+      <th>Age</th>
+      <th>Comments</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vehicles.each do |vehicle| %>
+      <tr>
+        <td><%= vehicle.vin %></td>
+        <td><%= vehicle.mileage %></td>
+        <td><%= vehicle.year %></td>
+        <td><%= vehicle.make %></td>
+        <td><%= vehicle.model %></td>
+        <td><%= vehicle.transmission %></td>
+        <td><%= vehicle.cylinders %></td>
+        <td><%= vehicle.drivetrain %></td>
+        <td><%= vehicle.body_type %></td>
+        <td><%= vehicle.fuel_type %></td>
+        <td><%= vehicle.body_style %></td>
+        <td><%= vehicle.title_in %></td>
+        <td><%= vehicle.mileage_is %></td>
+        <td><%= vehicle.new_used %></td>
+        <td><%= vehicle.exterior_color %></td>
+        <td><%= vehicle.interior_color %></td>
+        <td><%= vehicle.trim %></td>
+        <td><%= vehicle.doors %></td>
+        <td><%= vehicle.inventory_source %></td>
+        <td><%= vehicle.engine %></td>
+        <td><%= vehicle.highway_mpg %></td>
+        <td><%= vehicle.wheels %></td>
+        <td><%= vehicle.condition %></td>
+        <td><%= vehicle.tag_number %></td>
+        <td><%= vehicle.photos_taken %></td>
+        <td><%= vehicle.active %></td>
+        <td><%= vehicle.options %></td>
+        <td><%= vehicle.city_mpg %></td>
+        <td><%= vehicle.nada_wholesale %></td>
+        <td><%= vehicle.nada_retail %></td>
+        <td><%= vehicle.sale_status %></td>
+        <td><%= vehicle.est_recond_cost %></td>
+        <td><%= vehicle.age %></td>
+        <td><%= vehicle.comments %></td>
+        <td><%= link_to 'Show', vehicle %></td>
+        <td><%= link_to 'Edit', edit_vehicle_path(vehicle) %></td>
+        <td><%= link_to 'Destroy', vehicle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vehicle', new_vehicle_path %>

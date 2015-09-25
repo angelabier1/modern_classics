@@ -1,0 +1,44 @@
+<%= simple_form_for(@vehicle) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :vin %>
+    <%= f.input :mileage %>
+    <%= f.input :year %>
+    <%= f.input :make %>
+    <%= f.input :model %>
+    <%= f.input :transmission %>
+    <%= f.input :cylinders %>
+    <%= f.input :drivetrain %>
+    <%= f.input :body_type %>
+    <%= f.input :fuel_type %>
+    <%= f.input :body_style %>
+    <%= f.input :title_in %>
+    <%= f.input :mileage_is %>
+    <%= f.input :new_used %>
+    <%= f.input :exterior_color %>
+    <%= f.input :interior_color %>
+    <%= f.input :trim %>
+    <%= f.input :doors %>
+    <%= f.input :inventory_source %>
+    <%= f.input :engine %>
+    <%= f.input :highway_mpg %>
+    <%= f.input :wheels %>
+    <%= f.input :condition %>
+    <%= f.input :tag_number %>
+    <%= f.input :photos_taken %>
+    <%= f.input :active %>
+    <%= f.input :options %>
+    <%= f.input :city_mpg %>
+    <%= f.input :nada_wholesale %>
+    <%= f.input :nada_retail %>
+    <%= f.input :sale_status %>
+    <%= f.input :est_recond_cost %>
+    <%= f.input :age %>
+    <%= f.input :comments %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
